@@ -26,8 +26,7 @@ object Solution {
       try {
         val ans: Int = myCalculator.power(n, p)
         println(ans)
-      }
-      catch {
+      } catch {
         case e: Exception => println(e.getMessage)
       }
     }
