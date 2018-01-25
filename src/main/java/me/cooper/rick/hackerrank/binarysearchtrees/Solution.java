@@ -37,9 +37,9 @@ public class Solution {
         System.out.println(height);
     }
 
-    static class Node {
-        Node left, right;
-        int data;
+    public static class Node {
+        public Node left, right;
+        public int data;
 
         Node(int data) {
             this.data = data;

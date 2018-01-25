@@ -2,7 +2,7 @@ group 'me.cooper.rick.hackerrank'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.2.20'
+    ext.kotlin_version = '1.2.21'
     ext.scala_version = '2.12.3'
 
     repositories {
@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     compile "org.scala-lang:scala-library:$scala_version"
 
     testCompile 'org.scalatest:scalatest_2.11:3.0.1'
