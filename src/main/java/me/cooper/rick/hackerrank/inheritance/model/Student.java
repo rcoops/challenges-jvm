@@ -15,7 +15,7 @@ public final class Student extends Person {
         return Arrays.stream(scores).average().orElse(0.0D);
     }
 
-    public String calculate() {
+    private String calculate() {
         double averageScore = calculateAverageScore();
         String grade = "O";
         if (averageScore < 40) {

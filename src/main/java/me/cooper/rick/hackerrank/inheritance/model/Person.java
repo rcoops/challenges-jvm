@@ -1,12 +1,12 @@
 package me.cooper.rick.hackerrank.inheritance.model;
 
-public class Person {
+class Person {
 
     private final int idNumber;
     private String firstName;
     private String lastName;
 
-    public Person(int idNumber, String firstName, String lastName) {
+    Person(int idNumber, String firstName, String lastName) {
         this.idNumber = idNumber;
         this.firstName = firstName;
         this.lastName = lastName;
