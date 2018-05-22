@@ -26,23 +26,15 @@ public class Solution {
 
     private static int maxBitwiseAnd(int n, int k)
     {
+        // rangeclosed only does progressive ranges so need to reverse it with the map
         int[] NtoOne = IntStream.rangeClosed(1, n).map(it -> n - it + 1).toArray();
         return IntStream.of(NtoOne)
-                .map(N -> IntStream.of(NtoOne)
-                        .filter(it -> it < N)
-                        .map(it -> it & N)
-                        .filter(it -> it < k)
-                        .max()
-                        .orElse(0))
-                .reduce(Integer::max).orElse(0);
+                .map(N -> IntStream.of(NtoOne) // do 2 loops
+                        .filter(it -> it < N && (it & N) < k) // filter out the possibilities that don't match criteria
+                        .map(it -> it & N) // map it to the answers we want (bit wasteful doing twice but ?)
+                        .max() // get the max
+                        .orElse(0)) // unwrap any optional
+                .max()
+                .orElse(0); // same thing
     }
 }
-//        Set<Integer> bitwiseAnds = new HashSet<>();
-//        for (int N : NtoOne) {
-//            return
-////            for (int notN : notNs) {
-////                int bitwiseAnd = notN & N;
-////                if (bitwiseAnd < k) bitwiseAnds.add(bitwiseAnd);
-////            }
-//        }
-//        return bitwiseAnds.stream().reduce(Integer::max).orElse(0);
