@@ -32,8 +32,7 @@ public class Solution {
                 .map(N -> IntStream.of(NtoOne) // do 2 loops
                         .filter(it -> it < N && (it & N) < k) // filter out the possibilities that don't match criteria
                         .map(it -> it & N) // map it to the answers we want (bit wasteful doing twice but ?)
-                        .max() // get the max
-                        .orElse(0)) // unwrap any optional
+                        .max().orElse(0)) // get the max & unwrap any optional
                 .max()
                 .orElse(0); // same thing
     }
