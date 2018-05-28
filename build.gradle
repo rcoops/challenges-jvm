@@ -2,7 +2,7 @@ group 'me.cooper.rick.hackerrank'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.2.21'
+    ext.kotlin_version = '1.2.41'
     ext.scala_version = '2.12.3'
 
     repositories {

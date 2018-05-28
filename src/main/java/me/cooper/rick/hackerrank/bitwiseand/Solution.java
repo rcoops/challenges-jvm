@@ -36,4 +36,5 @@ public class Solution {
                 .max()
                 .orElse(0); // same thing
     }
+
 }
